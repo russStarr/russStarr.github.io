@@ -1,5 +1,9 @@
 /* NAVBAR
 -------------------------------------------------- */
+/* COLOR THEME
+https://coolors.co/dcd6f7-a6b1e1-b4869f-985f6f-4e4c67
+*/
+
 
 .navbar {
   margin-bottom: 0;
@@ -21,7 +25,7 @@
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 240px;
-  background-color: #777;
+  background-color: #985F6F;
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -56,10 +60,10 @@
 
 .marketing .col-md-4 .glyphicon {
   font-size: 60px;
-  background-color: #EAEAEA;
+  background-color: #DCD6F7;
   border-radius: 50%;
   padding: 40px;
-  color: #444;
+  color: #4E4C67;
 }
 
 
@@ -83,7 +87,7 @@ footer {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 160px;
-  background: #444;
+  background: #4E4C67;
   color: white;
   text-shadow: 1px 1px 1px black;
   padding: 40px 0;
