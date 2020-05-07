@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{ .Title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="img/avatar.jpg" alt="" /></span>
+							<h1 id="title">{{ .Site.Params.name }}</h1>
+							<p>{{ .Site.Params.description }}</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-slideshare">Portfolio</span></a></li>
+								<li><a href="#gaming" id="gaming-link" class="skel-layers-ignoreHref"><span class="icon fa-gamepad">Gaming</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+              {{ range .Site.Params.social }}
+              <li><a href="{{ .link }}" class="icon fa-{{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+              {{ end }}
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Hi! I'm Russ Starr. Welcome to my personal site.</h2>
+								<p><br /></p>
+							</header>
+
+							<footer>
+								<a href="#portfolio" class="button scrolly">Portfolio</a>
+								<a href="#techcommunity" class="button scrolly">Tech Community</a>
+								<a href="#gaming" class="button scrolly">Gaming</a>
+								<a href="#about" class="button scrolly">About Me</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Portfolio</h2>
+							</header>
+
+							<p>I have participated in a number of tech talks over the years and below are a few highlights. </p>
+
+
+              <div class="row">
+                <div class="4u 12u$(mobile)">
+                  {{ range .Site.Params.portfolio1 }} 
+                  <article class="item">
+                    <a href="{{ .url }}" class="image fit"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+                    <header>
+                      <h3>{{ .title }}</h3>
+                    </header>
+                  </article>
+                  {{ end }}
+                </div>
+
+                <div class="4u 12u$(mobile)">
+                  {{ range .Site.Params.portfolio2 }} 
+                  <article class="item">
+                    <a href="{{ .url }}" class="image fit"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+                    <header>
+                      <h3>{{ .title }}</h3>
+                    </header>
+                  </article>
+                  {{ end }}
+                </div>
+
+                <div class="4u 12u$(mobile)">
+                  {{ range .Site.Params.portfolio3 }} 
+                  <article class="item">
+                    <a href="{{ .url }}" class="image fit"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+                    <header>
+                      <h3>{{ .title }}</h3>
+                    </header>
+                  </article>
+                  {{ end }}
+                </div>
+              </div>
+
+
+						</div>
+					</section>
+				<!-- Tech Community -->
+					<section id="techcommunity" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Tech Community</h2>
+							</header>
+
+							<p>Below are a few Meetups or Open Source Software related community profiles I have. </p>
+
+
+			<div class="row">
+				<div class="4u 12u$(mobile)">
+				{{ range .Site.Params.techcommunity1 }} 
+				<article class="item">
+					<a href="{{ .url }}" class="image tc"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+					<header>
+					<h3>{{ .title }}</h3>
+					</header>
+				</article>
+				{{ end }}
+				</div>
+
+				<div class="4u 12u$(mobile)">
+				{{ range .Site.Params.techcommunity2 }} 
+				<article class="item">
+					<a href="{{ .url }}" class="image tc"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+					<header>
+					<h3>{{ .title }}</h3>
+					</header>
+				</article>
+				{{ end }}
+				</div>
+
+				<div class="4u 12u$(mobile)">
+				{{ range .Site.Params.techcommunity3 }} 
+				<article class="item">
+					<a href="{{ .url }}" class="image tc"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+					<header>
+					<h3>{{ .title }}</h3>
+					</header>
+				</article>
+				{{ end }}
+				</div>
+			</div>
+
+
+						</div>
+					</section>
+
+				<!-- Gaming -->
+				<section id="gaming" class="two">
+					<div class="container">
+
+						<header>
+							<h2>Gaming</h2>
+						</header>
+
+						<p>Find my gaming profiles below. I am constantly changing games that I play. </p>
+							<!-- Gaming Icons -->
+							<div class="row">
+								<div class="2u 12u$(mobile)">
+								  {{ range .Site.Params.gaming1 }} 
+								  <article class="game">
+									<a href="{{ .url }}" class="image games"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+									<header>
+									  <h3>{{ .title }}</h3>
+									  <h5>{{ .gamertag }}</h5>
+									</header>
+								  </article>
+								  {{ end }}
+								</div>
+				
+								<div class="2u 12u$(mobile)">
+								  {{ range .Site.Params.gaming2 }} 
+								  <article class="game">
+									<a href="{{ .url }}" class="image games"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+									<header>
+									  <h3>{{ .title }}</h3>
+									  <h5>{{ .gamertag }}</h5>
+									</header>
+								  </article>
+								  {{ end }}
+								</div>
+				
+								<div class="2u 12u$(mobile)">
+								  {{ range .Site.Params.gaming3 }} 
+								  <article class="game">
+									<a href="{{ .url }}" class="image games"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+									<header>
+									  <h3>{{ .title }}</h3>
+									  <h5>{{ .gamertag }}</h5>
+									</header>
+								  </article>
+								  {{ end }}
+								</div>
+
+								<div class="2u 12u$(mobile)">
+									{{ range .Site.Params.gaming4 }} 
+									<article class="game">
+										<a href="{{ .url }}" class="image games"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+										<header>
+										<h3>{{ .title }}</h3>
+										<h5>{{ .gamertag }}</h5>
+										</header>
+									</article>
+									{{ end }}
+									</div>
+								<div class="2u 12u$(mobile)">
+									{{ range .Site.Params.gaming5 }} 
+									<article class="game">
+										<a href="{{ .url }}" class="image games"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+										<header>
+										<h3>{{ .title }}</h3>
+										<h5>{{ .gamertag }}</h5>
+										</header>
+									</article>
+									{{ end }}
+									</div>
+
+								<div class="2u 12u$(mobile)">
+									{{ range .Site.Params.gaming6 }} 
+									<article class="game">
+										<a href="{{ .url }}" class="image games"><img src="{{ .source }}" alt="{{ .alt }}" /></a>
+										<header>
+										<h3>{{ .title }}</h3>
+										<h5>{{ .gamertag }}</h5>
+										</header>
+									</article>
+									{{ end }}
+									</div>
+							</div>
+					</div>
+				</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="img/about.jpg" alt="" /></a>
+
+							<p>I have participated in IT for the better part of 20 years. My first job was
+								at an Internet Service Provider and Internet Cafe where I first learned about
+								Linux, networking, systems administration, and the web.
+							</p>
+							<p>I got into Linux as a hobby around kernel 2.0.35 (Slackware 3.6) and learned a lot
+								of early networking through that. In high school I took Networking classes at Votech
+								and learned lots of, now outdated, technologies like Novell, IPX/SPX, ISDN, X-25, 
+								frame relay, etc.
+							</p>
+							<p>In college I took up OpenBSD and focused on Cisco networking courses. I got my 
+								CCNP before graduating college.
+							</p>
+							<p>After college I focused heavily on networking at Cerner. I started as a Network Engineer
+								and I am now a Lead Technology Architect. The first few years at Cerner included mostly
+								WAN and some basic data center technologies. I began to focus more on the data center 
+								and eventually transitioned to our private cloud team where I brough OpenStack to
+								life at Cerner as a private cloud solution. Today I am on our Cloud Enablement Engineering
+								team where I help our product teams be successful in AWS.
+							</p>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>If you have any questions, tech talk request, or any other inqueries, please drop a message below.</p>
+
+							<form method="post" action="https://formspree.io/mknqnaez">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>	
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; {{ .Site.Params.copyright }}</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Powered by <a href="https://gohugo.io/">Hugo</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/js/jquery.min.js"></script>
+			<script src="/js/jquery.scrolly.min.js"></script>
+			<script src="/js/jquery.scrollzer.min.js"></script>
+			<script src="/js/skel.min.js"></script>
+			<script src="/js/util.js"></script>
+			<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/js/main.js"></script>
+
+	</body>
+</html>
